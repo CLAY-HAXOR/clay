@@ -1,0 +1,2 @@
+/plugins/content/jw_allvideos/jw_allvideos/tmpl/Framed/alfah.php
+/plugins/content/jw_allvideos/tmpl/Framed/dev.php
